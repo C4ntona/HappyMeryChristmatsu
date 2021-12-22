@@ -1,0 +1,311 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	 background-image: url('../image/fondohd.webp');
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 overflow: hidden;
+	 
+}
+html,body{
+	overflow-x: hidden;
+}
+/*Parte de los textos*/
+.texto{	
+	display:flex;
+    justify-content: center; 
+    align-items: center;
+	color:#FFFFFF;
+	font-size:25px;
+	font-family: "Sofia", sans-serif;
+	width:600px ;
+	opacity:0;
+}
+#t1{
+	animation: texto1 10s linear;
+}
+#t2{
+	animation: texto2 10s linear;
+	animation-delay:10s;
+	float: right;
+}
+#t3{
+	animation: texto3 10s linear;
+	animation-delay:20s;
+	float: left;
+}
+@keyframes texto1{	
+	0%{
+		opacity:0;
+	}
+	25%{
+		opacity:0.5;
+	}
+	50%{
+		opacity:1;
+	}
+	75%{
+		opacity:0.5;
+	}
+	100%{
+		opacity:0;
+	}	
+}
+@keyframes texto2{	
+	0%{
+		opacity:0;
+	}
+	25%{
+		opacity:0.5;
+	}
+	50%{
+		opacity:1;
+	}
+	75%{
+		opacity:0.5;
+	}
+	100%{
+		opacity:0;
+	}	
+}
+@keyframes texto3{	
+	0%{
+		opacity:0;
+	}
+	25%{
+		opacity:0.5;
+	}
+	50%{
+		opacity:1;
+	}
+	75%{
+		opacity:0.5;
+	}
+	100%{
+		opacity:0;
+	}	
+}
+/*Imagenes que pasan por el body*/
+#imagen1{
+	position: absolute;
+	right: 0;
+	opacity:0;
+	animation: ima1 10s linear;
+	
+}
+#imagen2{
+	position: absolute;
+	left: 0;
+	opacity:0;
+	animation: ima2 10s linear;
+	animation-delay:10s;
+	
+}
+#imagen3{
+	position: absolute;
+	left: 15%;
+	float: center;
+	opacity:0;
+	animation: ima3 10s linear;
+	animation-delay:20s;
+	
+}
+@keyframes ima1{	
+	0%{
+		opacity:0;
+	}
+	25%{
+		opacity:0.5;
+	}
+	50%{
+		opacity:1;
+	}
+	75%{
+		opacity:0.5;
+	}
+	100%{
+		opacity:0;
+	}	
+}
+@keyframes ima2{	
+	0%{
+		opacity:0;
+	}
+	25%{
+		opacity:0.5;
+	}
+	50%{
+		opacity:1;
+	}
+	75%{
+		opacity:0.5;
+	}
+	100%{
+		opacity:0;
+	}	
+}
+@keyframes ima3{	
+	0%{
+		opacity:0;
+	}
+	25%{
+		opacity:0.5;
+	}
+	50%{
+		opacity:1;
+	}
+	75%{
+		opacity:0.5;
+	}
+	100%{
+		opacity:0;
+	}	
+}
+/*Parte final con las letras de feliz navidad*/
+.santa{
+	height: 340px;
+	width: 660px;
+	position: absolute;
+	left:25%;
+	top:30%;
+	animation: santa 20s linear;
+	animation-delay:31s;
+	opacity: 0;
+	z-index: 10;
+	overflow-x: hidden;
+}
+
+@keyframes santa{	
+	0%{opacity: 1;}
+	100%{opacity: 1;}
+}
+.letrita{
+	position: absolute;
+	color:goldenrod;
+	font-size:170px;
+	font-family: "Waterfall", sans-serif;
+	left:25%;
+	
+	opacity: 0%;
+	
+}
+#let1{
+	position: absolute;
+	left:5%;
+	animation: finales 20s infinite;
+	animation-delay:31s;
+	z-index:6;
+}
+#let2{
+	position: absolute;
+	animation: finales 20s infinite;
+	animation-delay:31s;
+	z-index: 5;
+	left:34%
+}
+#let3{
+	position: absolute;
+	animation: finales 20s infinite;
+	animation-delay:31s;
+	z-index: 4;
+	left:60%;
+}
+@keyframes finales{
+	
+	20%{ 
+		
+		top:18%;
+		opacity:10%;}
+	30%{opacity:100%;
+		z-index:20
+	}
+	100%{opacity:100%;
+		
+		top:18%;
+		z-index:20
+	}
+}
+/*La parte de los moviles (el z-index aquí se aprecia levemente porque sale de la imagen de santa hacia su posicion
+*/
+@media screen and (max-width:414px) {
+	body{
+		height: 736px;
+	}
+	#t1{
+		width: 300px;
+		height: 100px;
+		position:absolute;
+		top:10%;
+	}
+	#t2{
+		width: 300px;
+		height: 100px;
+		position:absolute;
+		top:10%;
+	}
+	#t3{
+		width: 300px;
+		height: 100px;
+		position:absolute;
+		top:10%;
+	}
+	#imagen1{
+		background-image: url(../image/Los2amobile.png);
+		background-repeat: no-repeat;
+		position:absolute;
+		top:50%;
+		left:20%;
+	}
+	#imagen2{
+		background-image: url(../image/Los3amobile.png);
+		position:absolute;
+		background-repeat: no-repeat;
+		top:50%;
+		left:20%;
+	}
+	#imagen3{
+		background-image: url(../image/Lostodosamobile.png);
+		position:absolute;
+		background-repeat: no-repeat;
+		top:50%;
+		left:20%;
+	}
+	
+	.santa{
+		height: 150px;
+		width: 300px;
+		left:9%;
+	}
+	.letrita{
+		position: absolute;
+		font-size: 40px;
+		left:25%;
+		top:30%;	
+	}
+	img{
+		opacity: 0;
+	}	
+	#let1{
+		position: absolute;
+		left:5%;
+		animation: finales 20s infinite;
+		animation-delay:31s;
+		z-index:6;
+	}
+	#let2{
+		position: absolute;
+		animation: finales 20s infinite;
+		animation-delay:31s;
+		z-index: 5;
+		left:34%
+	}
+	#let3{
+		position: absolute;
+		animation: finales 20s infinite;
+		animation-delay:31s;
+		z-index: 4;
+		left:60%;
+	}
+}
